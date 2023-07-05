@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 const shoesContainer = document.getElementById('shoes-container');
 
-// Fetch shoe data from db.json
-fetch('db.json')
+// Fetch shoe data from https://rapidapi.com/kaushiksheel9/api/shoes-collections
+
+fetch('https://rapidapi.com/kaushiksheel9/api/shoes-collections')
     .then(response => response.json())
     .then(data => {
         const shoes = data.shoes;
