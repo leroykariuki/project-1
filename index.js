@@ -29,6 +29,15 @@ document.addEventListener('DOMContentLoaded', function () {
               votes.textContent = 'Votes: ' + shoe.votes;
               shoeCard.appendChild(votes);
 
+              const voteButton = document.createElement('button');
+              voteButton.textContent = 'Vote';
+              voteButton.addEventListener('click', function () {
+                  const newVotes = shoe.votes + 1;
+                  votes.textContent = 'Votes: ' + newVotes;
+                  shoe.votes = newVotes;
+              });
+              shoeCard.appendChild(voteButton);
+
               shoeCardsContainer.appendChild(shoeCard);
           });
       });
