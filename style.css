@@ -1,9 +1,11 @@
-.h1 {
-  background-color: slategray;
+h1 {
+  color: gold;
+  background-color: rgb(15, 14, 12);
 }
 
-.body {
-  background-color: lightsteelblue;
+body {
+  background-color: darkred;
+  background-image: -webkit-image-set();
 }
 
 .shoe-card {
