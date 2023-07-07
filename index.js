@@ -12,33 +12,48 @@ document.addEventListener('DOMContentLoaded', function () {
               image.src = shoe.image;
               shoeCard.appendChild(image);
 
-              const name = document.createElement('h3');
-              name.textContent = shoe.name;
-              shoeCard.appendChild(name);
+              image.addEventListener('click', function () {
+                  const modalOverlay = document.getElementById('modalOverlay');
+                  const modalContent = document.getElementById('modalContent');
+                  modalContent.innerHTML = '';
 
-              const price = document.createElement('p');
-              price.textContent = 'Price: ' + shoe.price;
-              shoeCard.appendChild(price);
+                  const name = document.createElement('h3');
+                  name.textContent = shoe.name;
+                  modalContent.appendChild(name);
 
-              const description = document.createElement('p');
-              description.textContent = shoe.description;
-              shoeCard.appendChild(description);
+                  const price = document.createElement('p');
+                  price.textContent = 'Price: ' + shoe.price;
+                  modalContent.appendChild(price);
 
-              const votes = document.createElement('p');
-              votes.className = 'votes';
-              votes.textContent = 'Votes: ' + shoe.votes;
-              shoeCard.appendChild(votes);
+                  const description = document.createElement('p');
+                  description.textContent = shoe.description;
+                  modalContent.appendChild(description);
 
-              const voteButton = document.createElement('button');
-              voteButton.textContent = 'Vote';
-              voteButton.addEventListener('click', function () {
-                  const newVotes = shoe.votes + 1;
-                  votes.textContent = 'Votes: ' + newVotes;
-                  shoe.votes = newVotes;
+                  const votes = document.createElement('p');
+                  votes.className = 'votes';
+                  votes.textContent = 'Votes: ' + shoe.votes;
+                  modalContent.appendChild(votes);
+
+                  const voteButton = document.createElement('button');
+                  voteButton.textContent = 'Vote';
+                  voteButton.addEventListener('click', function () {
+                      const newVotes = shoe.votes + 1;
+                      votes.textContent = 'Votes: ' + newVotes;
+                      shoe.votes = newVotes;
+                  });
+                  modalContent.appendChild(voteButton);
+
+                  modalOverlay.style.display = 'block';
               });
-              shoeCard.appendChild(voteButton);
 
               shoeCardsContainer.appendChild(shoeCard);
           });
       });
+
+  const closeButton = document.getElementById('closeButton');
+  const modalOverlay = document.getElementById('modalOverlay');
+
+  closeButton.addEventListener('click', function () {
+      modalOverlay.style.display = 'none';
+  });
 });

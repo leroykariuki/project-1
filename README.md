@@ -5,7 +5,7 @@ The project name:"Shoe Voting App".
 Author name:"Leroy kariuki".
 
 # Features
-Displays a collection of shoes with their names, prices, descriptions, and images.
+Displays a collection of shoes, click on the shoe to display their names, prices, descriptions, and images.
 Each shoe item includes a "Vote" button that allows users to vote for that particular shoe.
 The vote count is updated in real-time when a user clicks the "Vote" button.
 
@@ -63,3 +63,4 @@ After cloning the repo,the following is a list when commits where made:
 19.Installed package-lock.json by running "npm install".
 20.Added few items to the package.json.
 21.Wrote a README.md file.
+22.Modified the index.js so as to display the shoe details after clicking on the image.
