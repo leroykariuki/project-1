@@ -28,6 +28,8 @@ Open the index.html file in a web browser.
 # File Structure
 The project structure is as follows:
 
+db.json: Contains details obtained from a public API URL'https://my-json-server.typicode.com/leroykariuki/server
+'
 index.html: The main HTML file that renders the web page.
 style.css: The CSS file that styles the web page.
 index.js: The JavaScript file that fetches data from db.json and dynamically creates the shoe catalog.
