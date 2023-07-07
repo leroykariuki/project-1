@@ -64,3 +64,4 @@ After cloning the repo,the following is a list when commits where made:
 20.Added few items to the package.json.
 21.Wrote a README.md file.
 22.Modified the index.js so as to display the shoe details after clicking on the image.
+23.Added a comment section

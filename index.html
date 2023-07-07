@@ -10,11 +10,18 @@
 
 <body>
     <h1>Stride with Style</h1>
-    <p>Shoes of diffrent designs are out in the market.Help us determine the best of the best through voting for them.Click on the shoe to view its details</p>
-    
 
     <div class="shoe-card">
         <!-- Shoe cards will be dynamically added here -->
+    </div>
+
+    <div class="comment-section">
+        <h2>Comments</h2>
+        <form id="commentForm">
+            <textarea id="commentInput" placeholder="Write a comment..."></textarea>
+            <button type="submit" id="submitButton">Submit</button>
+        </form>
+        <div id="message"></div>
     </div>
 
     <div class="modal-overlay" id="modalOverlay">

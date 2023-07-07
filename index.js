@@ -56,4 +56,16 @@ document.addEventListener('DOMContentLoaded', function () {
   closeButton.addEventListener('click', function () {
       modalOverlay.style.display = 'none';
   });
+
+  const commentForm = document.getElementById('commentForm');
+  const commentInput = document.getElementById('commentInput');
+  const submitButton = document.getElementById('submitButton');
+  const message = document.getElementById('message');
+
+  commentForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const comment = commentInput.value;
+      message.textContent = 'Submitted';
+      commentInput.value = '';
+  });
 });
